@@ -33,7 +33,7 @@ app.post("/edit", function(req, res) {
 })
 
 app.post("/create", function(req, res) {
-    fs.writeFile(`. / files / $ { req.body.title.split(' ').join('') }.txt `, req.body.details, function(err) {
+    fs.writeFile(`./files/${req.body.title.split(' ').join('') }.txt`, req.body.details, function(err) {
         res.redirect("/")
     })
 })
